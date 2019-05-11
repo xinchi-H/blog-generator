@@ -84,33 +84,63 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#HTTP的请求与响应<br>HTTP（HyperText Transfer Protocol），超文本传输协议，指导浏览器和服务器如何进行沟通</p>
-<p>##请求<br>*请求通常包含四部分，第三部分固定是一个“回车”用来分隔第二、第四部分，第四部分可以为空<br>1.第一部分为请求行：包括请求方法、目录、使用的协议及版本<br>2.第二部分为请求头：其中“Content-Type”表示请求第四部分内容的格式，“Content-Length”表示请求第四部分内容的长度<br>3.第三部分为“回车”<br>4.第四部分为要上传的数据</p>
-<p>###例如：</p>
-<blockquote>
+        <h1 id="HTTP的请求与响应"><a href="#HTTP的请求与响应" class="headerlink" title="HTTP的请求与响应"></a>HTTP的请求与响应</h1><p>HTTP（HyperText Transfer Protocol），超文本传输协议，指导浏览器和服务器如何进行沟通</p>
+<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><ul>
+<li>请求通常包含四部分，第三部分固定是一个“回车”用来分隔第二、第四部分，第四部分可以为空</li>
+</ul>
+<ol>
+<li>第一部分为请求行：包括请求方法、目录、使用的协议及版本</li>
+<li>第二部分为请求头：其中“Content-Type”表示请求第四部分内容的格式，“Content-Length”表示请求第四部分内容的长度</li>
+<li>第三部分为“回车”</li>
+<li>第四部分为要上传的数据<h3 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h3><blockquote>
 <p>1|POST / HTTP/1.1<br>2|Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>2|User-Agent: curl/7.54.0<br>2|Accept: <em>/</em><br>2|Frank: xxx<br>2|Content-Length: 10<br>2|Content-Type: application/x-www-form-urlencoded<br>3|<br>4|1234567890</p>
 </blockquote>
-<p>###用Chrome查看请求<br>1.打开 Network<br>2.地址栏输入网址<br>3.在 Network 点击，查看 request，点击「view source」<br>4.如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</p>
+<h3 id="用Chrome查看请求"><a href="#用Chrome查看请求" class="headerlink" title="用Chrome查看请求"></a>用Chrome查看请求</h3></li>
+<li>打开 Network</li>
+<li>地址栏输入网址</li>
+<li>在 Network 点击，查看 request，点击「view source」</li>
+<li>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到</li>
+</ol>
 <hr>
-<p>##响应<br>*响应也包含四部分，第三部分同样是“回车”<br>1.第一部分为协议、版本号、状态码、状态解释<br>2.第二部分中的“Content-Type”表示响应第四部分内容的格式，“Content-Length”表示响应第四部分内容的长度<br>3.第三部分为“回车”<br>4.第四部分为要下载的内容</p>
-<p>###例如：</p>
-<blockquote>
-<p>1|HTTP/1.1 302 Found<br>2|Connection: Keep-Alive<br>2|Content-Length: 17931<br>2|Content-Type: text/html<br>2|Date: Tue, 10 Oct 2017 09:19:47 GMT<br>2|Etag: “54d9749e-460b”<br>2|Server: bfe/1.0.8.18<br>3|<br>4|<html><br>4|<head><meta name="generator" content="Hexo 3.8.0"><br>4|<meta http-equiv="content-type" content="text/html;charset=utf-8"> 后面太长，省略了……</head></html></p>
+<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><ul>
+<li>响应也包含四部分，第三部分同样是“回车”</li>
+</ul>
+<ol>
+<li>第一部分为协议、版本号、状态码、状态解释</li>
+<li>第二部分中的“Content-Type”表示响应第四部分内容的格式，“Content-Length”表示响应第四部分内容的长度</li>
+<li>第三部分为“回车”</li>
+<li>第四部分为要下载的内容<h3 id="例如：-1"><a href="#例如：-1" class="headerlink" title="例如："></a>例如：</h3><blockquote>
+<p>1|HTTP/1.1 302 Found<br>2|Connection: Keep-Alive<br>2|Content-Length: 17931<br>2|Content-Type: text/html<br>2|Date: Tue, 10 Oct 2017 09:19:47 GMT<br>2|Etag: “54d9749e-460b”<br>2|Server: bfe/1.0.8.18<br>3|<br>4|太长，省略了……</p>
 </blockquote>
-<p>###用Chrome查看请求<br>1.打开 Network<br>2.地址栏输入网址<br>3.选中第一个响应<br>4.查看 Response Headers，点击「view source」，点击「view source」，点击「view source」<br>5.查看 Response 或者 Preview，你会看到响应的第 4 部分</p>
-<p>###状态码<br><em>1xx 不常用
-</em>2xx 表示成功<br><em>3xx 表示已经移动的文件，并且通常指定新的地址信息
-</em>4xx 表示客户端错误<br>*5xx 表示服务端错误</p>
+<h3 id="用Chrome查看请求-1"><a href="#用Chrome查看请求-1" class="headerlink" title="用Chrome查看请求"></a>用Chrome查看请求</h3></li>
+<li>打开 Network</li>
+<li>地址栏输入网址</li>
+<li>选中第一个响应</li>
+<li>查看 Response Headers，点击「view source」，点击「view source」，点击「view source」</li>
+<li>查看 Response 或者 Preview，你会看到响应的第 4 部分<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3></li>
+</ol>
+<ul>
+<li>1xx 不常用</li>
+<li>2xx 表示成功</li>
+<li>3xx 表示已经移动的文件，并且通常指定新的地址信息</li>
+<li>4xx 表示客户端错误</li>
+<li>5xx 表示服务端错误</li>
+</ul>
 <hr>
-<p>##curl命令<br><em>curl -X POST -d “1234567890” -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a>
-</em>-X POST 表示POST请求<br><em>-d “123456790” 印后里面的内容为添加的数据，会显示在请求的第四部分
-</em>-s 表示静音模式，不显示进度条<br><em>-v 代表同时显示请求和响应
-</em>-H “Frank: xxx” 引号里面的内容为添加的响应头<br>*– “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a> –后面的链接代表要请求的网址</p>
+<h2 id="curl命令"><a href="#curl命令" class="headerlink" title="curl命令"></a>curl命令</h2><ul>
+<li>curl -X POST -d “1234567890” -s -v -H “Frank: xxx” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+<li>-X POST 表示POST请求</li>
+<li>-d “123456790” 印后里面的内容为添加的数据，会显示在请求的第四部分</li>
+<li>-s 表示静音模式，不显示进度条</li>
+<li>-v 代表同时显示请求和响应</li>
+<li>-H “Frank: xxx” 引号里面的内容为添加的响应头</li>
+<li>– “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a> –后面的链接代表要请求的网址</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/11/任务6作业/" data-id="cjvjg24ik000384qiw1t29yb1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/11/任务6作业/" data-id="cjvjgejm500034kqiwfff2kad" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/任务4作业/" data-id="cjvjg24ig000184qi0vpkvr2e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/任务4作业/" data-id="cjvjgejm400024kqi0q7gr5ni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -190,7 +220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/开博大吉/" data-id="cjvjg24ij000284qimf5lgahj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/开博大吉/" data-id="cjvjgejm200014kqi5ioisjxn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/hello-world/" data-id="cjvjg24ib000084qiocagjp2g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/hello-world/" data-id="cjvjgejlx00004kqih1dwpajs" class="article-share-link">Share</a>
       
       
     </footer>
