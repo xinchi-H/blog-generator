@@ -62,6 +62,88 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-HTML常用标签" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/15/HTML常用标签/" class="article-date">
+  <time datetime="2019-05-15T08:24:56.000Z" itemprop="datePublished">2019-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/15/HTML常用标签/">HTML常用标签</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML常用标签简介"><a href="#HTML常用标签简介" class="headerlink" title="HTML常用标签简介"></a>HTML常用标签简介</h1><h2 id="一、标签"><a href="#一、标签" class="headerlink" title="一、标签"></a>一、标签</h2><ul>
+<li>HTML标签由尖括号包围的关键词构成，比如<code>&lt;html&gt;</code></li>
+<li>HTML标签有成对出现（双标签）的，也有单个出现（单标签）的。</li>
+<li>例：<br><code>&lt;p&gt;Neuedu，你好！&lt;/p&gt;（段落标签）</code><br><code>&lt;br/&gt;（换行标签）</code></li>
+</ul>
+<hr>
+<ul>
+<li>HTML标签对中的第一个标签是开始标签，第二个标签是结束标签。</li>
+<li>HTML标签尽量使用小写，所有单个标签都会以/结束，不要忘记。<h2 id="二、属性"><a href="#二、属性" class="headerlink" title="二、属性"></a>二、属性</h2></li>
+<li>HTML标签可以拥有属性。属性提供了有关HTML元素的更多信息。</li>
+<li>属性总是以名称/值得形式出现，比如：name = “value”</li>
+<li>属性总是在HTML元素的开始标签中规定</li>
+<li>始终为属性值加引号：双引号是最常用的，不过使用单引号也没问题。</li>
+<li>例：<br><code>&lt;a target=xxx href=&quot;http://qq.com&quot;&gt;qq&lt;/a&gt;</code><h2 id="三、HTML固定基本结构"><a href="#三、HTML固定基本结构" class="headerlink" title="三、HTML固定基本结构"></a>三、HTML固定基本结构</h2></li>
+<li><code>&lt;html&gt;&lt;/html&gt; — &lt;html&gt;</code> 元素。这个元素包含了整个页面的内容，被称为根元素。</li>
+<li><code>&lt;head&gt;&lt;/head&gt; — &lt;head&gt;</code> 元素。这个元素放置的内容不是展现给用户的，而是包含例如面向搜索引擎的搜索关键字（keywords）、页面描述、CSS 样式表和字符编码声明等。</li>
+<li><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> — 这个元素指定了当前文档使用 UTF-8 字符编码 ，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题。</li>
+<li><code>&lt;title&gt;&lt;/title&gt; — &lt;title&gt;</code> 元素。这个元素设置页面的标题，显示在浏览器标签页上，同时作为收藏网页的描述文字。</li>
+<li><code>&lt;body&gt;&lt;/body&gt; — &lt;body&gt;</code> 元素。这个元素包含期望让用户在访问页面时看到的内容，可以是文本、图像、视频、游戏、可播放的音轨或其他内容。</li>
+<li>例：<br><code>&lt;!DOCTYPE html&gt;</code><br><code>&lt;html&gt;</code><br><code>&lt;head&gt;</code><br><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code><br><code>&lt;title&gt;XXX&lt;/title&gt;</code><br><code>&lt;/head&gt;</code><br><code>&lt;body&gt;&lt;/body&gt;</code><br><code>&lt;/html&gt;</code><h2 id="四、常见HTML标签"><a href="#四、常见HTML标签" class="headerlink" title="四、常见HTML标签"></a>四、常见HTML标签</h2><h3 id="lt-a-gt-——锚点"><a href="#lt-a-gt-——锚点" class="headerlink" title="&lt;a&gt;——锚点"></a><code>&lt;a&gt;</code>——锚点</h3><ul>
+<li>全称：anchor<br><code>&lt;a&gt;</code> 标签定义超链接，用于从一张页面链接到另一张页面。<br><code>&lt;a&gt;</code> 元素最重要的属性是 href 属性，它指示链接的目标。</li>
+</ul>
+</li>
+<li>用法举例</li>
+</ul>
+<ol>
+<li>在新页面打开链接   <code>&lt;a href=&quot;http://qq.com&quot; target=&quot;_blank&quot;&gt;qq&lt;/a&gt;</code></li>
+<li>在当前页面打开链接   <code>&lt;a href=&quot;http://qq.com&quot; target=&quot;_self&quot;&gt;qq&lt;/a&gt;</code></li>
+<li>在上级页面打开链接   <code>&lt;a href=&quot;http://qq.com&quot; target=&quot;_parent&quot;&gt;qq&lt;/a&gt;</code></li>
+<li>在顶层页面打开链接   <code>&lt;a href=&quot;http://qq.com&quot; target=&quot;_top&quot;&gt;qq&lt;/a&gt;</code></li>
+<li>刷新页面   <code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code></li>
+<li>下载链接   <code>&lt;a href=&quot;http://qq.com&quot; download&gt;下载&lt;/a&gt;</code></li>
+<li>打开目录下的文件   <code>&lt;a href=&quot;./xxx.html&quot;&gt;&lt;/a&gt;</code></li>
+<li>页面内跳转，不发起请求(href=”#”则跳转到页面顶部)   <code>&lt;a href=&quot;#xxx&quot;&gt;&lt;/a&gt;</code></li>
+<li>发起GET请求   <code>&lt;a href=&quot;？name=xxx&quot;&gt;&lt;/a&gt;</code></li>
+<li>使用当前页面协议（//）   <code>&lt;a href=&quot;//qq.com&quot;&gt;&lt;/a&gt;</code></li>
+<li>伪协议，执行JavaScript代码(href=”javascript:;”则变为点击之后什么都不做的链接)   <code>&lt;a href=&quot;javascript: alert(1);&quot;&gt;&lt;/a&gt;</code></li>
+<li>在iframe嵌套页面内打开链接（frameborder设置边框）<br><code>&lt;iframe name=xxx src=&quot;#&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code><br><code>&lt;a target=xxx href=&quot;http://qq.com&quot;&gt;qq&lt;/a&gt;</code><h3 id="lt-table-gt-——表格"><a href="#lt-table-gt-——表格" class="headerlink" title="&lt;table&gt;——表格"></a><code>&lt;table&gt;</code>——表格</h3></li>
+</ol>
+<ul>
+<li>简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。</li>
+<li>tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。</li>
+<li>例：<br><code>table border=&quot;1&quot;&gt;</code><br><code>&lt;tr&gt;</code><br>  <code>&lt;th&gt;Month&lt;/th&gt;</code><br>  <code>&lt;th&gt;Savings&lt;/th&gt;</code><br><code>&lt;/tr&gt;</code><br><code>&lt;tr&gt;</code><br>  <code>&lt;td&gt;January&lt;/td&gt;</code><br>  <code>&lt;td&gt;$100&lt;/td&gt;</code><br><code>&lt;/tr&gt;</code><br><code>&lt;/table&gt;</code></li>
+</ul>
+<hr>
+<p>待续</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/15/HTML常用标签/" data-id="cjvphmo9x00013cqimdgtotoi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-任务6作业" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/11/任务6作业/" class="article-date">
@@ -140,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/11/任务6作业/" data-id="cjvjgejm500034kqiwfff2kad" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/11/任务6作业/" data-id="cjvphmoa100033cqig6z6d6f9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/任务4作业/" data-id="cjvjgejm400024kqi0q7gr5ni" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/任务4作业/" data-id="cjvphmo9z00023cqiulb5jlk0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/开博大吉/" data-id="cjvjgejm200014kqi5ioisjxn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/开博大吉/" data-id="cjvphmoa200043cqibsjh8eo9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/06/hello-world/" data-id="cjvjgejlx00004kqih1dwpajs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/06/hello-world/" data-id="cjvphmo9r00003cqi6ft1th89" class="article-share-link">Share</a>
       
       
     </footer>
@@ -304,6 +386,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/05/15/HTML常用标签/">HTML常用标签</a>
+          </li>
         
           <li>
             <a href="/2019/05/11/任务6作业/">任务6作业</a>
