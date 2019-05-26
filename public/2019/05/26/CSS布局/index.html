@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>CSS布局 | xcHu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="CSS常用布局简介##一、左右布局  目前我使用较多的左右布局方法有两种： float实现左右布局 position:absolute左右布局    通过float实现左右布局   给需要左右布局的元素加上”float: left”、”float: right” 给左右布局的元素的父级元素加上”class=’.clearfix’”，避免下一部分的内容自己跳到横向排列后面来“.clearfix::a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS布局">
+<meta property="og:url" content="http://yoursite.com/2019/05/26/CSS布局/index.html">
+<meta property="og:site_name" content="xcHu">
+<meta property="og:description" content="CSS常用布局简介##一、左右布局  目前我使用较多的左右布局方法有两种： float实现左右布局 position:absolute左右布局    通过float实现左右布局   给需要左右布局的元素加上”float: left”、”float: right” 给左右布局的元素的父级元素加上”class=’.clearfix’”，避免下一部分的内容自己跳到横向排列后面来“.clearfix::a">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-26T13:25:17.076Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS布局">
+<meta name="twitter:description" content="CSS常用布局简介##一、左右布局  目前我使用较多的左右布局方法有两种： float实现左右布局 position:absolute左右布局    通过float实现左右布局   给需要左右布局的元素加上”float: left”、”float: right” 给左右布局的元素的父级元素加上”class=’.clearfix’”，避免下一部分的内容自己跳到横向排列后面来“.clearfix::a">
+  
+    <link rel="alternate" href="/atom.xml" title="xcHu" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">xcHu</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/26/CSS布局/" class="article-date">
+  <time datetime="2019-05-26T08:43:21.000Z" itemprop="datePublished">2019-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CSS常用布局简介"><a href="#CSS常用布局简介" class="headerlink" title="CSS常用布局简介"></a>CSS常用布局简介</h1><p>##一、左右布局</p>
+<ul>
+<li>目前我使用较多的左右布局方法有两种：<br></li>
+<li>float实现左右布局<br></li>
+<li>position:absolute左右布局<br></li>
+</ul>
+<hr>
+<ol>
+<li>通过float实现左右布局</li>
+</ol>
+<ul>
+<li>给需要左右布局的元素加上”float: left”、”float: right”</li>
+<li>给左右布局的元素的父级元素加上”class=’.clearfix’”，避免下一部分的内容自己跳到横向排列后面来<br><br>“.clearfix::after{<br>  content: ‘’;<br>  display: block;<br>  clear: both;”</li>
+</ul>
+<hr>
+<ol start="2">
+<li>通过position:absolute左右布局</li>
+</ol>
+<ul>
+<li>给需要左右布局的元素加上”position: absolute;”</li>
+<li>给左右布局的元素的父级元素加上”position: relative;”</li>
+<li>通过分别调整两个元素的”left””top”属性来实现左右布局</li>
+<li>例如：<br><br>左——“style=’left: 0px;top: 0px’”<br><br>右——“style=’left: 645px;top: 0px’”<br>##二、左中右布局</li>
+<li>与左右布局的第二种方法类似，通过”top””left””right”三个属性调整左中右三个元素的位置来达到左中右的布局方式</li>
+<li>给中间的元素加上”position: relative;”,并设置对应的左右”margin”</li>
+<li>给左右两边的元素加上”position: absolute;”</li>
+<li>例如：<br><br>左——“style=’left: 0;top: 0’”<br><br>中——“style=’margin: 0px 190px 0 190px’”<br><br>右——“style=’right: 0;top: 0’”<br></li>
+</ul>
+<hr>
+<ul>
+<li>通过左元素: float: left; 右元素: float: right; 中间元素:自动填充的方法</li>
+<li>设置中间元素的左右两边margin宽度<br>##三、水平居中</li>
+</ul>
+<ol>
+<li>要水平居中对齐一个元素(如 <div>), 可以使用”margin: auto;”</div></li>
+</ol>
+<ul>
+<li>设置元素的宽度将防止它溢出到容器的边缘,元素通过指定宽度，并将两边的空外边距平均分配</li>
+<li>例如：<br><br>“.center{<br>  margin: auto;<br>  width: 50%;<br>  }”</li>
+</ul>
+<ol start="2">
+<li>文本在元素内居中对齐，可以使用”text-align: center;”<br>##四、竖直居中</li>
+<li>通过设置上下”padding”来实现竖直居中</li>
+</ol>
+<ul>
+<li>例如：<br><br>“.center {<br>  padding: 70px 0;<br>  border: 3px solid green;<br>}”</li>
+</ul>
+<ol start="2">
+<li>使用”line-height”</li>
+</ol>
+<ul>
+<li>设置子元素的line-height值等于父元素的height，这种方法适用于子元素为单行文本的情况。<br>##五、CSS的小技巧</li>
+<li>在<span>中添加”word-break: break-all”使内联元素中的英文单词可以被打断自动换行</span></li>
+<li>在<div>中添加”display: inline-block”使块级元素可以填充上一行的空隙（类似”float”的效果）</div></li>
+<li>块级元素的子元素宽度默认为父级元素的100%</li>
+<li>以一个冒号开头的是伪类，以两个冒号开头的是伪元素</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/26/CSS布局/" data-id="cjw4z7nqx00018sqiop530kk9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/15/HTML常用标签/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTML常用标签</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/26/CSS布局/">CSS布局</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/15/HTML常用标签/">HTML常用标签</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/11/任务6作业/">任务6作业</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/06/任务4作业/">任务4作业</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/06/开博大吉/">开博大吉</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 huxinchi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
